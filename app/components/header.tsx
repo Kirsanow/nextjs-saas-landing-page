@@ -49,7 +49,7 @@ function MobileNavLink(
   return (
     <PopoverButton
       as={Link}
-      className="block text-base leading-7 tracking-tight text-secondary-foreground"
+      className="block text-base tracking-tight leading-7 text-secondary-foreground"
       {...props}
     />
   );
@@ -58,35 +58,35 @@ function MobileNavLink(
 export function Header() {
   return (
     <header>
-      <nav className="mx-auto max-w-5xl px-8">
-        <Container className="relative z-50 flex justify-between py-8">
-          <div className="relative z-10 flex w-full items-center justify-between gap-16">
-            <Link href="/app" className="flex items-center gap-2 font-semibold">
+      <nav className="px-8 mx-auto max-w-6xl">
+        <Container className="flex relative z-50 justify-between py-8">
+          <div className="flex relative z-10 gap-16 justify-between items-center w-full">
+            <Link href="/" className="flex gap-2 items-center font-semibold">
               <SVGLogo />
               <span className="text-lg font-bold text-slate-800">
                 Quillminds
               </span>
             </Link>
-            <div className="hidden items-center justify-center lg:flex lg:gap-10">
+            <div className="hidden justify-center items-center lg:flex lg:gap-10">
               <NavLinks />
               <Button href="/sign-up" color="blue">
                 Get Started
               </Button>
             </div>
           </div>
-          <div className="flex items-center gap-6">
+          <div className="flex gap-6 items-center">
             <Popover className="lg:hidden">
               {({ open }) => (
                 <>
                   <PopoverButton
-                    className="ui-not-focus-visible:outline-none relative z-10 -m-2 inline-flex items-center rounded-lg stroke-slate-900 p-2 hover:bg-slate-200/50 hover:stroke-slate-600 active:stroke-slate-900"
+                    className="inline-flex relative z-10 items-center p-2 -m-2 rounded-lg ui-not-focus-visible:outline-none stroke-slate-900 hover:bg-slate-200/50 hover:stroke-slate-600 active:stroke-slate-900"
                     aria-label="Toggle site navigation"
                   >
                     {({ open }) =>
                       open ? (
-                        <ChevronUpIcon className="h-6 w-6" />
+                        <ChevronUpIcon className="w-6 h-6" />
                       ) : (
-                        <MenuIcon className="h-6 w-6" />
+                        <MenuIcon className="w-6 h-6" />
                       )
                     }
                   </PopoverButton>
@@ -99,7 +99,7 @@ export function Header() {
                           initial={{ opacity: 0 }}
                           animate={{ opacity: 1 }}
                           exit={{ opacity: 0 }}
-                          className="fixed inset-0 z-0 bg-slate-300/60 backdrop-blur"
+                          className="fixed inset-0 z-0 backdrop-blur bg-slate-300/60"
                         />
                         <PopoverPanel
                           static
@@ -111,7 +111,7 @@ export function Header() {
                             y: -32,
                             transition: { duration: 0.2 },
                           }}
-                          className="absolute inset-x-0 top-0 z-0 origin-top rounded-b-2xl bg-slate-50 px-6 pb-6 pt-32 shadow-2xl shadow-slate-900/20"
+                          className="absolute inset-x-0 top-0 z-0 px-6 pt-32 pb-6 rounded-b-2xl shadow-2xl origin-top bg-slate-50 shadow-slate-900/20"
                         >
                           <div className="space-y-4">
                             <MobileNavLink href="/#features">
@@ -121,9 +121,10 @@ export function Header() {
                               Pricing
                             </MobileNavLink>
                             <MobileNavLink href="/#faq">FAQs</MobileNavLink>
+                            <MobileNavLink href="/blog">Blog</MobileNavLink>
                           </div>
-                          <div className="mt-8 flex flex-col gap-4">
-                            <Button href="/login" outline>
+                          <div className="flex flex-col gap-4 mt-8">
+                            <Button href="/" outline>
                               Log in
                             </Button>
                             <Button href="#">Get Started</Button>

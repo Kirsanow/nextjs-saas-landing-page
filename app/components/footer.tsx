@@ -1,17 +1,18 @@
 import Image from "next/image";
 import Link from "next/link";
 import SVGLogo from "./svg-logo";
+import artemImg from "../../public/artem.png";
 
 export default function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-slate-50">
-      <div className="mx-auto max-w-7xl px-8 py-24">
+      <div className="px-8 py-24 mx-auto max-w-7xl">
         <div className="flex flex-col flex-wrap md:flex-row md:flex-nowrap lg:items-start">
-          <div className="mx-auto w-64 flex-shrink-0 text-center md:mx-0 md:text-left">
+          <div className="flex-shrink-0 mx-auto w-64 text-center md:mx-0 md:text-left">
             <Link
               href="/"
               aria-current="page"
-              className="flex items-center justify-center gap-2 md:justify-start"
+              className="flex gap-2 justify-center items-center md:justify-start"
             >
               <SVGLogo />
               <strong className="text-base font-extrabold tracking-tight text-slate-800 md:text-lg">
@@ -26,12 +27,12 @@ export default function Footer() {
               Copyright © {new Date().getFullYear()} - All rights reserved
             </p>
           </div>
-          <div className="-mb-10 mt-10 flex flex-grow flex-wrap justify-center text-center md:mt-0 md:pl-24">
-            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className="footer-title mb-3 text-sm font-semibold tracking-widest text-slate-900 md:text-left">
+          <div className="flex flex-wrap flex-grow justify-center mt-10 -mb-10 text-center md:mt-0 md:pl-24">
+            <div className="px-4 w-full md:w-1/2 lg:w-1/3">
+              <div className="mb-3 text-sm font-semibold tracking-widest footer-title text-slate-900 md:text-left">
                 LINKS
               </div>
-              <div className="mb-10 flex flex-col items-center justify-center gap-2 text-sm text-slate-700 hover:text-slate-900 md:items-start">
+              <div className="flex flex-col gap-2 justify-center items-center mb-10 text-sm text-slate-700 hover:text-slate-900 md:items-start">
                 <a
                   href="mailto:contact@quillminds.com"
                   target="_blank"
@@ -46,11 +47,11 @@ export default function Footer() {
                 </Link>
               </div>
             </div>
-            <div className="w-full px-4 md:w-1/2 lg:w-1/3">
-              <div className="footer-title mb-3 text-sm font-semibold tracking-widest text-slate-900 md:text-left">
+            <div className="px-4 w-full md:w-1/2 lg:w-1/3">
+              <div className="mb-3 text-sm font-semibold tracking-widest footer-title text-slate-900 md:text-left">
                 LEGAL
               </div>
-              <div className="mb-10 flex flex-col items-center justify-center gap-2 text-sm text-slate-700 hover:text-slate-900 md:items-start">
+              <div className="flex flex-col gap-2 justify-center items-center mb-10 text-sm text-slate-700 hover:text-slate-900 md:items-start">
                 <Link href="/tos" className="link link-hover">
                   Terms of services
                 </Link>
@@ -62,23 +63,21 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-12 text-sm md:mt-16">
-          <div className="flex flex-row items-center justify-start gap-4">
+          <div className="flex flex-row gap-4 justify-start items-center">
             <Image
               alt="Artem Kirsanov"
-              src={
-                "https://api.dicebear.com/9.x/miniavs/svg?backgroundColor=b6e3f4"
-              }
+              src={artemImg}
               width={48}
               height={48}
-              className="aspect-square w-12 rounded-full"
+              className="object-cover w-12 rounded-full aspect-square"
             />
-            <div className="text-base-content-secondary text-left leading-relaxed">
+            <div className="leading-relaxed text-left text-base-content-secondary">
               Hey Curious 👋 I&apos;m{" "}
               <a
                 href="#"
                 target="_blank"
                 rel="noreferrer"
-                className="link text-base-content font-medium"
+                className="font-medium link text-base-content"
               >
                 Artem
               </a>
@@ -87,7 +86,7 @@ export default function Footer() {
                 href="https://x.com/kirsnvartem"
                 target="_blank"
                 rel="noreferrer"
-                className="link text-base-content font-medium"
+                className="font-medium link text-base-content"
               >
                 X.
               </a>
