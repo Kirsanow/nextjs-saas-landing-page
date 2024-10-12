@@ -1,7 +1,7 @@
 "use client";
 import TestimonialSingle from "./testimonial-single";
 import { Button } from "./button";
-export default function Pricing() {
+export default function Pricing({ config }: { config?: any }) {
   return (
     <section className="overflow-hidden bg-slate-50" id="pricing">
       <div className="mx-auto max-w-5xl px-8 py-24">

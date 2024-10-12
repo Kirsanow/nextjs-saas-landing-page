@@ -155,7 +155,7 @@ const features = [
   },
 ];
 
-export default function AccordionFeatures() {
+export default function AccordionFeatures({ config }: { config?: any }) {
   const [activeFeature, setActiveFeature] = useState(1);
 
   return (

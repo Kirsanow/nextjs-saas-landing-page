@@ -1,7 +1,7 @@
 import React from "react";
 import { Button } from "./button";
 
-export default function CTA() {
+export default function CTA({ config }: { config?: any }) {
   return (
     <section className="bg-base-100 relative">
       <div className="relative mx-auto max-w-7xl px-8 py-24 text-center text-slate-800 md:py-48">

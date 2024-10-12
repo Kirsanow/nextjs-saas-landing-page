@@ -1,7 +1,7 @@
 import { Button } from "./button";
 import TestimonialsAvatars from "./testimonials-avatars";
 
-function Hero() {
+function Hero({ config }: { config?: any }) {
   return (
     <div>
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-center px-8 py-12 pt-4 lg:px-12 lg:py-24">

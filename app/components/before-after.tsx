@@ -1,4 +1,4 @@
-export default function BeforeAfter() {
+export default function BeforeAfter({ config }: { config?: any }) {
   return (
     <section>
       <div className="mx-auto max-w-5xl px-8 py-16 md:py-24">
